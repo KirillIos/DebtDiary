@@ -11,7 +11,6 @@ struct DetailView: View {
     
     var body: some View {
         VStack {
-            Spacer().frame(height: getSafeAreaTopInset())
             HStack {
                 Button(action: {
                     presentationMode.wrappedValue.dismiss()
