@@ -20,7 +20,6 @@ final class DebtListViewModel<T: Object>: ObservableObject {
             notificationToken = results.observe { [weak self] changes in
                 switch changes {
                 case .initial:
-                    // Начальная загрузка данных
                     self?.list = results
                 case .update:
                     self?.list = results

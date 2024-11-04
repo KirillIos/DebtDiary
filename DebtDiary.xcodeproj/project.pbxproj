@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F90EC8152CD51F7E0030CC6B /* codemagic.yaml in Resources */ = {isa = PBXBuildFile; fileRef = F90EC8142CD51F7E0030CC6B /* codemagic.yaml */; };
+		F90EC81C2CD6696B0030CC6B /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = F90EC81B2CD6696B0030CC6B /* FirebaseRemoteConfig */; };
+		F90EC8232CD66DC60030CC6B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F90EC8222CD66DC60030CC6B /* GoogleService-Info.plist */; };
 		F93269BD2CC1A2B5006E3F4B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F93269BC2CC1A2B5006E3F4B /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F90EC8142CD51F7E0030CC6B /* codemagic.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = codemagic.yaml; sourceTree = "<group>"; };
+		F90EC8222CD66DC60030CC6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F93269772CC19304006E3F4B /* DebtDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DebtDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -28,6 +33,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F93269BD2CC1A2B5006E3F4B /* RealmSwift in Frameworks */,
+				F90EC81C2CD6696B0030CC6B /* FirebaseRemoteConfig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +43,8 @@
 		F932696E2CC19304006E3F4B = {
 			isa = PBXGroup;
 			children = (
+				F90EC8222CD66DC60030CC6B /* GoogleService-Info.plist */,
+				F90EC8142CD51F7E0030CC6B /* codemagic.yaml */,
 				F93269792CC19304006E3F4B /* DebtDiary */,
 				F93269782CC19304006E3F4B /* Products */,
 			);
@@ -71,6 +79,7 @@
 			name = DebtDiary;
 			packageProductDependencies = (
 				F93269BC2CC1A2B5006E3F4B /* RealmSwift */,
+				F90EC81B2CD6696B0030CC6B /* FirebaseRemoteConfig */,
 			);
 			productName = DebtDiary;
 			productReference = F93269772CC19304006E3F4B /* DebtDiary.app */;
@@ -102,6 +111,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				F93269BB2CC1A2B5006E3F4B /* XCRemoteSwiftPackageReference "realm-swift" */,
+				F90EC81A2CD6696B0030CC6B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F93269782CC19304006E3F4B /* Products */;
@@ -118,6 +128,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F90EC8152CD51F7E0030CC6B /* codemagic.yaml in Resources */,
+				F90EC8232CD66DC60030CC6B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +270,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DebtDiary/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Debt Diary";
@@ -269,14 +283,15 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Kirill-Zubkov.DebtDiary";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DebtDiary.ddi2421;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -292,9 +307,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DebtDiary/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Debt Diary";
@@ -303,14 +320,15 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Kirill-Zubkov.DebtDiary";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DebtDiary.ddi2421;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -345,6 +363,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F90EC81A2CD6696B0030CC6B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.4.0;
+			};
+		};
 		F93269BB2CC1A2B5006E3F4B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -356,6 +382,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F90EC81B2CD6696B0030CC6B /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F90EC81A2CD6696B0030CC6B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
 		F93269BC2CC1A2B5006E3F4B /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F93269BB2CC1A2B5006E3F4B /* XCRemoteSwiftPackageReference "realm-swift" */;

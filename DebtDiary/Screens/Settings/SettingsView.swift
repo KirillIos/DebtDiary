@@ -36,7 +36,7 @@ struct SettingsView: View {
         }
 
         .sheet(isPresented: $viewModel.showShareView) {
-            ShareView(activityItems: ["https://apps.apple.com/app/id6621265063"])
+            ShareView(activityItems: ["https://apps.apple.com/app/id6737689408"])
         }
         .navigationBarBackButtonHidden(true)
         .onAppear {
